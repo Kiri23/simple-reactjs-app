@@ -23,6 +23,8 @@ jobs:
         run: yarn install
       - name: Staging Build
         run: yarn build
+      - name: directory exist
+        run: '[ -d /build ] && echo build is a directory'
       # - name: Deploy to S3
       #   uses: jakejarvis/s3-sync-action@master
       #   with:
